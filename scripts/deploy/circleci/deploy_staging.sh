@@ -6,11 +6,11 @@
 # This is the Github organisation or username of your fork. For example, if
 # your fork is located at https://github.com/xyz/open-sdg-site-starter, then
 # you should put "xyz" here. Changing this is required.
-GH_ORG_STAGING="CHANGEME"
+GH_ORG_STAGING="frankcarrascoza"
 # These variables only control the name/email on the automated Git commits.
 # Changing this is optional.
 GH_NAME="CircleCI"
-GH_EMAIL="no-reply@example.com"
+GH_EMAIL="frank_carrascoza@hotmail.com"
 ###################################
 
 # There is probably no need to modify anything below this point.
@@ -19,8 +19,8 @@ git config --global user.name "$GH_NAME"
 
 # CircleCI will identify the SSH key with a "Host" of gh-stg. In order to tell
 # Git to use this key, we need to hack the SSH key:
-sed -i -e 's/Host gh-staging/Host gh-staging\n  HostName github.com/g' ~/.ssh/config
-git clone git@gh-staging:$GH_ORG_STAGING/$CIRCLE_PROJECT_REPONAME.git out
+sed -i -e 's/Host gh-staging/Host gh-staging\n  HostName github.com/frankcarrascoza/open-sdg-data-starter' ~/.ssh/config
+git clone git@gh-staging:$GH_ORG_STAGING/$frankcarrascoza/open-sdg-data-starter.git out
 
 cd out
 git checkout gh-pages || git checkout --orphan gh-pages
